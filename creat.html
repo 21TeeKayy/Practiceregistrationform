@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styless.css">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Register for a free webinar</title>
+</head>
+<body>
+<form>
+  <div class="container">
+
+    <p class="number">
+        <input class="button11" type="text" placeholder="Email Address" size="18" id="email" required>
+    </p>
+
+    <p class="number">
+        <input class="button12" type="text" placeholder="Name" size="18" id="name" required>
+    </p>
+
+    <p class="number">
+        <input class="button13" type="text" placeholder="Number" size="18" id="number" required>
+    </p>
+
+    <p class="number">
+        <input class="button14" type="text" placeholder="Password" size="18" id="password" required>
+    </p>
+    <div class="checkbox-card">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" class="checkme"> <b>Click, only if you agree with everything </b>
+        </label>
+
+        <br><br>
+      </div>
+      <div class="apply-box">
+        <input class = "button10" type="submit" value="Register">
+      </div>
+    </div>
+    </div>
+</form>
+<script src="index.js" charset="utf-8"></script>
+<script>
+  $(function(){
+    $(".checkme").click(function(event){
+      var x = $(this).is(':checked');
+      if (x == true){
+        $(this).parents(".checkbox-card").find('.apply-box').show();
+      }
+      else {
+        $(this).parents(".checkbox-card").find('.apply-box').hide();
+      }
+    });
+  })
+</script>
+</body>
+</html>
